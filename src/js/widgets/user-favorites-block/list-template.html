@@ -1,0 +1,7 @@
+<% if(count){%>
+<a class="block__header" href="<%= helpers.url('user-favorited-tracks', {userId: userId}) %>">
+    <span class="block__header__title"><span class="glyphicon glyphicon-heart"></span> <%= count+ ' ' %> likes </span>
+    <span class="block__header__more"> View all</span>
+</a>
+<div class="js-container"></div>
+<%}%>

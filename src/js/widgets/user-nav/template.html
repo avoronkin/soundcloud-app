@@ -1,0 +1,12 @@
+<ul class="nav nav-tabs">
+    <% _.each(nav, function(item){%>
+        <% if(item.active){%>
+            <li class="active">
+        <%}else{%>
+            <li>
+        <%}%> 
+        <a href="<%= item.url %>">
+            <%= item.name %>
+        </a>
+    <%})%>
+</ul>

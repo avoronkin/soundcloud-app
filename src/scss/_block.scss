@@ -1,0 +1,49 @@
+@import "compass/utilities/general/clearfix";
+
+
+    .block {
+        margin-bottom: 15px;
+    }
+    .block__header {
+        display: block;
+        color: #999;
+        padding-bottom: 7px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #f2f2f2;
+        @include clearfix;
+    }
+    .block__header__title{
+        float: left;
+    }
+    .block__header__more{
+        float: right;
+    }
+
+@mixin item($name, $imgWidth:52px) {
+    .#{$name} {
+        position: relative;
+        padding-left: $imgWidth;
+        padding-bottom: 5px;
+        min-height: $imgWidth;
+        border-bottom: 1px solid #f2f2f2;
+        margin-bottom: 12px;
+    }
+
+    .#{$name}__cover {
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    .#{$name}__header {
+        @include clearfix;
+    }
+    .#{$name}__header__title{
+        float:left;
+    }
+    .#{$name}__header__play_button{
+        float:left;
+        padding: 0 5px 5px 0;
+    }
+
+}

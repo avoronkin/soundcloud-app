@@ -1,0 +1,12 @@
+<% if(items.length){%>
+<a href="#" class="block__header">
+<span  class="block__header__title">Comments </span>
+</a>
+<% _.each(items, function(item){%>
+<div class="comment">
+    <%= item.body %>
+</div>
+
+<%})%>
+
+<%}%>

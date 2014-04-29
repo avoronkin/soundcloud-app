@@ -1,0 +1,12 @@
+<% if(count){%>
+<a class="block__header" href="<%= helpers.url('playlists', {userId: userId}) %>">
+    <span class="block__header_title"><span class="glyphicon glyphicon-th-list"></span> 
+        <%= count %> playlists 
+    </span>
+    <span class="block__header__more">
+        View all
+    </span>
+</a>
+<div class="js-container">
+</div>
+<%}%>

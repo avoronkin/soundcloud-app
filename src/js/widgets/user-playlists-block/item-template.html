@@ -1,0 +1,8 @@
+<a class="playlist__cover" href="<%= helpers.url('playlist', {userId: playlist.user_id, playlistId: playlist.id}) %>" >
+    <img src="<%= helpers.img(playlist.artwork_url, 'badge')  %>">
+</a> 
+<div class="playlist__header">
+    <a href="<%= helpers.url('playlist', {userId: playlist.user_id, playlistId: playlist.id}) %>" >
+        <%= playlist.title %> 
+    </a> 
+</div>

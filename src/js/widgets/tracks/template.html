@@ -1,0 +1,19 @@
+iiitracks
+<div>
+<% _.each(items, function(item){%>
+<div>
+<img width="100" src="<%= helpers.img(item.artwork_url,'badge') %>"/>
+<a href="<%= helpers.url('user', {id: item.user_id}) %>">
+    <%= (item.user && item.user.username) %>: 
+</a>
+<a href="<%= helpers.url('track', { id: item.id})%>">
+    <%= item.title %>
+</a>
+<% if(item.genre){%>
+<a href="<%= helpers.url('tag', {tag: encodeURIComponent(item.genre).toLowerCase()}) %>" >#<%= item.genre %></a>
+<%}%>
+<%= item.tag_list %>
+</div>
+
+<%})%>
+</div>

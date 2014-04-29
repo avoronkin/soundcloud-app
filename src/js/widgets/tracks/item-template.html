@@ -1,0 +1,39 @@
+<a class="track__cover" href="<%= helpers.url('track', {id: item.id}) %>">
+    <img src="<%= helpers.img(item.artwork_url,'large') %>" />
+</a>
+<div class="track__header">
+    <div class="js-play-button track__header__play_button play_button"></div>
+    <div class="track__header__title">
+        <div>
+            <a class="" href="<%= helpers.url('user', {id: item.user.id}) %>">
+                <%= item.user.username %>
+            </a>
+        </div>
+        <div>
+            <a class="" href="<%= helpers.url('track', {id: item.id}) %>">
+                <%= item.title %>
+            </a>
+        </div>
+        <div><%= helpers.fromNow(item.created_at) %></div>
+    </div>
+</div>
+<div class="track__body">
+    <img class="resize" src="<%= item.waveform_url %>" />
+    <%= helpers.toTime(item.duration) %>
+</div>
+<div class="track__footer">
+    <% if(item.playback_count){%>
+    <span class="glyphicon glyphicon-play"><%= item.playback_count %></span> 
+    <%}%>
+     <% if(item.favoritings_count){%>
+    <span class="glyphicon glyphicon-heart"><%= item.favoritings_count %></span> 
+    <%}%>
+     <% if(item.comment_count){%>
+    <span class="glyphicon glyphicon-comment"><%= item.comment_count %></span> 
+    <%}%>
+     <% if(item.download_count){%>
+    <span class="glyphicon glyphicon-download"><%= item.download_count %></span> 
+    <%}%>
+
+
+</div>

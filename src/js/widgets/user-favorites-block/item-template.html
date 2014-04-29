@@ -1,0 +1,9 @@
+<a class="favorited__cover" href="<%= helpers.url('track', {id: item.id}) %>">
+    <img src="<%= helpers.img(item.artwork_url,'badge') %>" />
+</a>
+<div class="favorited__header">
+    <a href="<%= helpers.url('track', {id: item.id}) %>">
+        <%= item.title %>
+    </a>
+    <div class="js-play-button">iiii</div>
+</div>

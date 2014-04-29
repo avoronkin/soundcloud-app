@@ -1,0 +1,9 @@
+<div>
+<% _.each(items, function(item){%>
+<div>
+<img width="100" src="<%= item.artwork_url || (item.user && item.user.awatar_url) || '/img/cloudx120.png'%>"/>
+<a href="/tracks/<%=item.id%>"><%= (item.user && item.user.username) %>: <%= item.title %></a>
+</div>
+
+<%})%>
+</div>

@@ -1,0 +1,7 @@
+@import "block";
+
+@include item('track', 110px);
+.track__header__play_button{
+    font-size: 2em;
+}
+

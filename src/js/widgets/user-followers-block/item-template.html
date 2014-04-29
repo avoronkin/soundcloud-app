@@ -1,0 +1,8 @@
+<a class="follower__cover" href="<%= helpers.url('user', {id: item.id}) %>" >
+    <img src="<%= helpers.img(item.avatar_url, 'badge')  %>">
+</a>
+<div class="follower__header">
+    <a href="<%= helpers.url('user', {id: item.id}) %>" >
+    <%= item.username %>
+    </a>
+</div>
